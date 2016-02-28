@@ -73,7 +73,7 @@ Plugin 'SirVer/ultisnips'
 
 " Snippets are separated from the engine. Add this if you want them:
 Plugin 'honza/vim-snippets'
-"Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'ervandew/supertab'
 
 Plugin 'scrooloose/nerdtree'
