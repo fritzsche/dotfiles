@@ -30,5 +30,6 @@ In vim run
 
 ## tmux.conf
 
-Base configuration for tmux.
+Base configuration for tmux. This is changing the `PREFIX` from `CTRL-B` to `CTRL-A`. This is in particular usefull as I have mapped the `CAPS LOCK` to `CTRL` so I can issue the `PREFIX` just from the homerow of the keyboard.
+
 
