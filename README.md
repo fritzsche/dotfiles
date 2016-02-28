@@ -1,4 +1,4 @@
-# dotfiles
+# My Vim Dotfiles
 
 This repo contains my vim setup.
 
@@ -13,9 +13,20 @@ ln -s dotfiles/vimrc ~/.vimrc
 ln -s dotfiles/tmux.conf ~/.tmux.conf
 ```
 
-## vimrc
+## Vim Setup  vimrc
 
 Base configuration for vim. 
+
+Initially you need to install [vundle](https://github.com/VundleVim/Vundle.vim) by cloning the repository: 
+````
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+````
+
+In vim run 
+
+```
+:PluginInstall
+```
 
 ## tmux.conf
 
