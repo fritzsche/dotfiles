@@ -41,7 +41,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'othree/html5.vim'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'chase/vim-ansible-yaml'
-Plugin 'honza/vim-snippets'
+"Plugin 'honza/vim-snippets'
 
 Plugin 'slim-template/vim-slim'
 Plugin 'tpope/vim-bundler'
@@ -68,6 +68,11 @@ Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'airblade/vim-gitgutter'
 
+" Track the engine.
+Plugin 'SirVer/ultisnips'
+
+" Snippets are separated from the engine. Add this if you want them:
+Plugin 'honza/vim-snippets'
 "Plugin 'Valloric/YouCompleteMe'
 Plugin 'ervandew/supertab'
 
@@ -120,6 +125,16 @@ hi CursorColumn cterm=NONE ctermbg=235
 nmap <Leader>x :set cursorline! cursorcolumn!<CR>
 
 
+"" make YCM compatible with UltiSnips (using supertab)
+" let g:ycm_key_list_select_completion = ['<C-j>']
+" let g:ycm_key_list_previous_completion = ['<C-k>']
+" let g:SuperTabDefaultCompletionType = '<C-j>'
+
+"" ultisnips directory
+"let g:UltiSnipsExpandTrigger="<tab>"
+"let g:UltiSnipsJumpForwardTrigger="<tab>"
+"let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+"
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
