@@ -28,7 +28,7 @@ In vim run
 :PluginInstall
 ```
 
-[YouCompleteMe](https://github.com/Valloric/YouCompleteMe) Plugin need to complile with this command
+[YouCompleteMe](https://github.com/Valloric/YouCompleteMe) Plugin need to compile with this command. It needs to have cmake installed that need to be installed first with homebrew.
 ```
 cd ~/.vim/bundle/YouCompleteMe
 ./install.py
