@@ -45,6 +45,13 @@ Plugin 'honza/vim-snippets'
 Plugin 'slim-template/vim-slim'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-endwise'
+Plugin 'Tpope/vim-commentary'
+Plugin 'tpope/vim-haml'
+Plugin 'tpope/vim-rake'
+Plugin 'avakhov/vim-yaml'
+
+Plugin 'danchoi/ri.vim'
+Plugin 'mileszs/ack.vim'
 
 Plugin 'flazz/vim-colorschemes'
 
