@@ -66,7 +66,9 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 
 
-Plugin 'ntpeters/vim-better-whitespace'
+"Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'bronson/vim-trailing-whitespace'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -91,14 +93,14 @@ nmap <leader>l :set list!<CR>
 
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
-"Invisible character colors 
+"Invisible character colors
 highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
 
 " Line numbers
 set number
 " NerdTree: Mapping Leader-n to NerdTree
-nnoremap <Leader>n :NERDTreeToggle<CR> 
+nnoremap <Leader>n :NERDTreeToggle<CR>
 
 " Needed for airline
 set laststatus=2
