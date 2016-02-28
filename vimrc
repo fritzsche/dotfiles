@@ -7,6 +7,7 @@ set fileencoding=utf-8
 set t_Co=256
 " Edit in Empty line
 set virtualedit=all
+set shell=/bin/sh
 
 " prefer space instead of tab with a width of 2
 set ts=2 sts=2 sw=2 expandtab
@@ -67,7 +68,8 @@ Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'airblade/vim-gitgutter'
 
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
+Plugin 'ervandew/supertab'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
