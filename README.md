@@ -13,7 +13,7 @@ ln -s dotfiles/vimrc ~/.vimrc
 ln -s dotfiles/tmux.conf ~/.tmux.conf
 ```
 
-## Vim Setup  vimrc
+## Vim Setup in vimrc
 
 Base configuration for vim. 
 
@@ -28,7 +28,7 @@ In vim run
 :PluginInstall
 ```
 
-## tmux.conf
+## Tmux Setup in tmux.conf
 
 Base configuration for tmux. This is changing the `PREFIX` from `CTRL-B` to `CTRL-A`. This is in particular usefull as I have mapped the `CAPS LOCK` to `CTRL` so I can issue the `PREFIX` just from the homerow of the keyboard.
 
