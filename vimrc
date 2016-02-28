@@ -18,6 +18,8 @@ let g:syntastic_eruby_ruby_quiet_messages =
 set rtp+=~/.vim/bundle/Vundle.vim
 " Allow backspaces everywhere
 set backspace=indent,eol,start
+" keep 2 lines on the screen when scrolling
+set scrolloff=2
 " Here start the vundle section with the plugins
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
@@ -101,6 +103,10 @@ nnoremap <Leader>n :NERDTreeToggle<CR>
 " Needed for airline
 set laststatus=2
 
+" crosshair on and off
+hi CursorLine   cterm=NONE ctermbg=235
+hi CursorColumn cterm=NONE ctermbg=235
+nmap <Leader>x :set cursorline! cursorcolumn!<CR>
 
 
 " To ignore plugin indent changes, instead use:
