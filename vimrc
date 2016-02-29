@@ -41,7 +41,6 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'othree/html5.vim'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'chase/vim-ansible-yaml'
-"Plugin 'honza/vim-snippets'
 
 Plugin 'slim-template/vim-slim'
 Plugin 'tpope/vim-bundler'
@@ -95,6 +94,10 @@ filetype on
 filetype indent on
 filetype plugin on
 
+"let g:airline_section_b = airline#section#create(['branch'])
+"if !exists('g:airline_symbols')
+"    let g:airline_symbols = {}
+"endif
 
 let mapleader = " "
 set helplang=de,en
@@ -124,6 +127,17 @@ hi CursorLine   cterm=NONE ctermbg=235
 hi CursorColumn cterm=NONE ctermbg=235
 nmap <Leader>x :set cursorline! cursorcolumn!<CR>
 
+set noswapfile
+set hidden
+set nowritebackup
+
+
+" Lines with equal indent form a fold.
+set foldmethod=indent
+set foldlevel=1
+set foldnestmax=10
+" Open all folds by default
+set nofoldenable
 
 "" make YCM compatible with UltiSnips (using supertab)
 " let g:ycm_key_list_select_completion = ['<C-j>']
