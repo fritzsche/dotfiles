@@ -8,7 +8,11 @@ set t_Co=256
 " Edit in Empty line
 set virtualedit=all
 set shell=/bin/sh
-
+" remove delay when pressing ESC
+set timeoutlen=1000 ttimeoutlen=0
+" prevent the cursor moving back after returning
+" from insert mode
+"inoremap <silent> <Esc> <C-O>:stopinsert<CR>
 " prefer space instead of tab with a width of 2
 set ts=2 sts=2 sw=2 expandtab
 " Enable Mouse
@@ -87,9 +91,10 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 " color scheme
-set background=dark
-colorscheme solarized
-let g:solarized_termcolors=256
+color molokai
+"set background=dark
+"colorscheme solarized
+"let g:solarized_termcolors=256
 
 syntax on
 filetype on
