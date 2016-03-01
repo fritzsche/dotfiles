@@ -41,6 +41,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'othree/html5.vim'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'chase/vim-ansible-yaml'
+Plugin 'ap/vim-css-color'
 
 Plugin 'slim-template/vim-slim'
 Plugin 'tpope/vim-bundler'
@@ -79,16 +80,17 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 
 
-"Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'bronson/vim-trailing-whitespace'
-
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 " color scheme
-color molokai
+set background=dark
+colorscheme solarized
+let g:solarized_termcolors=256
+
 syntax on
 filetype on
 filetype indent on
