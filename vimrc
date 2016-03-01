@@ -140,14 +140,10 @@ set foldnestmax=10
 set nofoldenable
 
 "" make YCM compatible with UltiSnips (using supertab)
-" let g:ycm_key_list_select_completion = ['<C-j>']
-" let g:ycm_key_list_previous_completion = ['<C-k>']
-" let g:SuperTabDefaultCompletionType = '<C-j>'
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
-"" ultisnips directory
-"let g:UltiSnipsExpandTrigger="<tab>"
-"let g:UltiSnipsJumpForwardTrigger="<tab>"
-"let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 "
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
