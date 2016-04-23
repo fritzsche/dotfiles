@@ -28,10 +28,24 @@ In vim run
 :PluginInstall
 ```
 
-[YouCompleteMe](https://github.com/Valloric/YouCompleteMe) Plugin need to compile with this command. It needs to have cmake installed that need to be installed first with homebrew.
+[YouCompleteMe](https://github.com/Valloric/YouCompleteMe) Plugin need to compile with this command. Install first the Python dev. environment and cmake.
+
+Debian:
+```
+apt-get install python-dev cmake
+```
+
+and use Homebrew on the Mac.
+
 ```
 cd ~/.vim/bundle/YouCompleteMe
 ./install.py
+```
+
+Compiling on the Raspberry Pi might freeze do to limited memory, because cmake is building on all cores in parallel. To avoid the freeze simply only on one CPU code:
+
+```
+YCM_CORES=1 ./install.py
 ```
 
 ## Tmux Setup in tmux.conf
