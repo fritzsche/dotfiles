@@ -201,10 +201,13 @@ function! s:build_go_files()
 endfunction
 "
 autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
+nmap <Leader>o :TagbarToggle<CR>
 
 let g:go_highlight_types = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
+
+"let g:tagbar_ctags_bin='/usr/local/bin/ctags'
 
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
