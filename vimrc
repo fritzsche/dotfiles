@@ -32,7 +32,10 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+" Dispatch is used by vim-go
 Plugin 'tpope/vim-dispatch'
+" Used by vim-go
+Plugin 'majutsushi/tagbar'
 Plugin 'fatih/vim-go'
 Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'vim-ruby/vim-ruby'
@@ -169,9 +172,24 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 set autowrite
 let g:go_fmt_command = "goimports"
 let g:go_fmt_fail_silently = 1
-autocmd FileType go nmap <leader>t  <Plug>(go-test)
-
+" Keybindings for run/build/test/coverage
+autocmd FileType go nmap <leader>r <Plug>(go-run)
+autocmd FileType go nmap <leader>b <Plug>(go-build)
+autocmd FileType go nmap <leader>t <Plug>(go-test)
 autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
+" Go-def-split
+autocmd FileType go nmap <Leader>ds <Plug>(go-def-split)
+autocmd FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+autocmd FileType go nmap <Leader>dt <Plug>(go-def-tab)
+" Open the relevant Godoc for the word under the cursor with <leader>gd or
+" open it vertically with <leader>gv
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+" open the Godoc in browser
+au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
+au FileType go nmap <Leader>s <Plug>(go-implements)
+" rename
+au FileType go nmap <Leader>e <Plug>(go-rename)
 " run :GoBuild or :GoTestCompile based on the go file
 function! s:build_go_files()
   let l:file = expand('%')
