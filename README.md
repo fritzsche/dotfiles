@@ -102,8 +102,10 @@ You can run git commands using `:Git` using the special symbol `%` for the curre
 
 Key       | fugitive | Description
 ----------|----------|----
-`:Git add %`| :Gwrite | stage file
-`:Git checkout %`| :Gread | checkout last version
-`:Git rm %` | :Gremove | delete file
-`:Git mv %` | :Gmove |rename file
+`:Git add %`| `:Gwrite` | stage file
+`:Git checkout %`| `:Gread` | checkout last version
+`:Git rm %` | `:Gremove` | delete file
+`:Git mv %` | `:Gmove` |rename file
+
+The `:Gcommit`command will open a split window to add a commit message.
 
