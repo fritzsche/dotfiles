@@ -83,7 +83,8 @@ Key       | Description
 `G`       | end of file
 `1G` / `gg` | begin of file
 `m`\<x\>     | mark line current cursor position
-'\<x\>     | Jump to begin of line marked with x
+`'`\<x\>     | Jump to begin of line marked with x
+`\``\<x\>   | Jump to mark x
 
 ### Copy and Past
 
@@ -95,4 +96,6 @@ Key       | Description
  `d`       | cut (delete) the selection
  `p`       | past after cursor
  `P`       | past before cursor
+
+### Git and Fugitive
 
