@@ -58,7 +58,13 @@ The leader key is mapped to `SPACE`.
 
 Key       | Description
 ----------|---------------
-`LEADER-n` | toggel Nerdtree.
+`LEADER-n` | toggle Nerdtree.
 `CTRL-p`   | select files with CTRL-p tool
+`h`        | left
+`j`        | down
+`k`        | up
+`l`        | right
+
+
 
 
