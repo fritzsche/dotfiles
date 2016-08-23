@@ -48,6 +48,11 @@ Compiling on the Raspberry Pi might freeze do to limited memory, because cmake i
 YCM_CORES=1 ./install.py
 ```
 
+Install ctags. On Mac:
+```
+brew install ctags
+```
+
 ## Tmux Setup in tmux.conf
 
 Base configuration for tmux. This is changing the `PREFIX` from `CTRL-B` to `CTRL-A`. This is in particular usefull as I have mapped the `CAPS LOCK` to `CTRL` so I can issue the `PREFIX` just from the homerow of the keyboard.
@@ -56,15 +61,34 @@ Base configuration for tmux. This is changing the `PREFIX` from `CTRL-B` to `CTR
 
 The leader key is mapped to `SPACE`.
 
+### General Tools
+
 Key       | Description
 ----------|---------------
 `LEADER-n` | toggle Nerdtree.
 `CTRL-p`   | select files with CTRL-p tool
-`h`        | left
-`j`        | down
-`k`        | up
-`l`        | right
 
+###Move the cursor
 
+ Key       | Description
+----------|---------------
+`h`       | left
+`j`       | down
+`k`       | up
+`l`       | right
+`0`       | begin of line
+`$`       | end of line
+`CTRL-u`  | half screen up
+`CTRL-f`  | half screen down
 
+### Copy and Past
+
+  Key       | Description
+ ----------|---------------
+ `v`       | start visual mode
+ `CTRL-v`  | start visual block mode
+ `y`       | copy (yank) the selection
+ `d`       | cut (delete) the selection
+ `p`       | past after cursor
+ `P`       | past before cursor
 
