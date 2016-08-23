@@ -85,6 +85,10 @@ Key       | Description
 `m`\<x\>     | mark line current cursor position
 `'`\<x\>     | Jump to begin of line marked with x
 `\``\<x\>   | Jump to mark x
+\<line\>`G` | Jump to line
+`e` | next end of word
+`w` | next begin of a word
+`b` | last begin of a word
 
 ### Copy and Past
 
@@ -107,5 +111,7 @@ Key       | fugitive | Description
 `:Git rm %` | `:Gremove` | delete file
 `:Git mv %` | `:Gmove` |rename file
 
-The `:Gcommit`command will open a split window to add a commit message.
+The `:Gcommit`command will open a split window to add a commit message. Use `:Gblame` to get a blame window opened.
+
+
 
