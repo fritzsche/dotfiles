@@ -80,6 +80,10 @@ Key       | Description
 `$`       | end of line
 `CTRL-u`  | half screen up
 `CTRL-f`  | half screen down
+`G`       | end of file
+`1G` / `gg` | begin of file
+`m`<x>     | mark line current cursor position
+'<x>     | Jump to begin of line marked with x
 
 ### Copy and Past
 
