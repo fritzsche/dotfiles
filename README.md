@@ -52,4 +52,13 @@ YCM_CORES=1 ./install.py
 
 Base configuration for tmux. This is changing the `PREFIX` from `CTRL-B` to `CTRL-A`. This is in particular usefull as I have mapped the `CAPS LOCK` to `CTRL` so I can issue the `PREFIX` just from the homerow of the keyboard.
 
+## Some keyboard shortcuts
+
+The leader key is mapped to `SPACE`.
+
+Key       | Description
+----------|---------------
+`LEADER-n` | toggel Nerdtree.
+`CTRL-p`   | select files with CTRL-p tool
+
 
