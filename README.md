@@ -137,4 +137,13 @@ The `:Gcommit`command will open a split window to add a commit message and `:Gpu
 `t`  | Jump to tag (special mapping for german keyboard)
 `CTRL-t` | Jump back
 
+### Buffer and Windows
+
+Key       | Description
+----------|---------------
+`:buffers` | show buffers ('a' = active / 'h' = hidden / ' ' = inactive)
+`CTRL-w s` | horizontal split the current window
+`CTRL-w v` | vertical split of the current window
+`CTRL-w n` | new window with an empty file
+`CTRL-w h` | move to the window to the left (similar for right/up/down)
 
