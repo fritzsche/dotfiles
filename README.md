@@ -121,14 +121,14 @@ Key       | Description
 ### Git and Fugitive
 You can run git commands using `:Git` using the special symbol `%` for the current file.
 
-Key       | fugitive | Description
+Command       | fugitive | Description
 ----------|----------|----
 `:Git add %`| `:Gwrite` | stage file
 `:Git checkout %`| `:Gread` | checkout last version
 `:Git rm %` | `:Gremove` | delete file
 `:Git mv %` | `:Gmove` |rename file
 
-The `:Gcommit`command will open a split window to add a commit message. Use `:Gblame` to get a blame window opened.
+The `:Gcommit`command will open a split window to add a commit message and `:Gpush` to get the latest changes from origin. Use `:Gblame` to get a blame window opened.
 
 
 
