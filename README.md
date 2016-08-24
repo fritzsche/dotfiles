@@ -147,3 +147,11 @@ Key       | Description
 `CTRL-w n` | new window with an empty file
 `CTRL-w h` | move to the window to the left (similar for right/up/down)
 
+### Macros
+
+Key       | Description
+----------|---------------
+`q`\<n\>  | record in register n
+`q`       | stop recording (when pressed during macro recording)
+`@`\<n\>  | play the macro
+
