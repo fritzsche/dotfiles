@@ -130,5 +130,11 @@ Command       | fugitive | Description
 
 The `:Gcommit`command will open a split window to add a commit message and `:Gpush` to get the latest changes from origin. Use `:Gblame` to get a blame window opened.
 
+### Help
+
+  Key       | Description
+----------|---------------
+`t`  | Jump to tag (special mapping for german keyboard)
+`CTRL-t` | Jump back
 
 

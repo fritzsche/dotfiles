@@ -112,6 +112,10 @@ filetype plugin on
 "endif
 
 let mapleader = " "
+" Remap the open tag in the help to t as CTRL-] is difficult to reach on
+" a german keyboard
+nnoremap t <C-]>
+" help language
 set helplang=de,en
 let g:ctrlp_map='<c-p>'
 " set runtimepath=~/.vim/thomas:$VIMRUNTIME
