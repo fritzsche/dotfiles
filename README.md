@@ -53,11 +53,18 @@ Install ctags. On Mac:
 brew install ctags
 ```
 
+On Ubuntu:
+```
+sudo apt-get install exuberant-ctags
+```
+
 ## Tmux Setup in tmux.conf
 
 Base configuration for tmux. This is changing the `PREFIX` from `CTRL-B` to `CTRL-A`. This is in particular usefull as I have mapped the `CAPS LOCK` to `CTRL` so I can issue the `PREFIX` just from the homerow of the keyboard.
 
 ## Some keyboard shortcuts
+
+In this section I try to collect some of the keyboard mapping that vim provides. This is work-in-progress as vim has just so many of them.
 
 The leader key is mapped to `SPACE`.
 
