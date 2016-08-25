@@ -97,6 +97,8 @@ Key       | Description
 `$`       | end of line
 `CTRL-u`  | half screen up
 `CTRL-f`  | half screen down
+`CTRL-e`  | scroll 1 line down
+`CTRL-y`  | scroll 1 line up
 `G`       | end of file
 `1G` / `gg` | begin of file
 `m`\<x\>     | mark line current cursor position
@@ -137,15 +139,23 @@ The `:Gcommit`command will open a split window to add a commit message and `:Gpu
 `t`  | Jump to tag (special mapping for german keyboard)
 `CTRL-t` | Jump back
 
-### Buffer and Windows
+### Buffer and Windows and Tabs
+
+Open vim with files in vertical split windows use option `-O` or with a `-o` in a horizontal split. Use `-p` to open all buffers in tabs.
 
 Key       | Description
 ----------|---------------
-`:buffers` | show buffers ('a' = active / 'h' = hidden / ' ' = inactive)
-`CTRL-w s` | horizontal split the current window
-`CTRL-w v` | vertical split of the current window
+`:buffers` | show buffers ('a' = active / 'h' = hidden / ' ' = inactive) `:ls`
+`CTRL-w s` | horizontal split the current window (`:split`)
+`CTRL-w v` | vertical split of the current window (`:vsplit`)
 `CTRL-w n` | new window with an empty file
 `CTRL-w h` | move to the window to the left (similar for right/up/down)
+`:q`       | close current buffer
+`:tabe`    | new tab
+`:tabn` or `gt` | next tab
+`:tabp` or `gT` | prev. tab
+`z`\<nr\>  | set windows to height nr
+
 
 ### Macros
 
