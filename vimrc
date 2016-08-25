@@ -117,6 +117,8 @@ let mapleader = " "
 nnoremap t <C-]>
 " help language
 set helplang=de,en
+
+
 let g:ctrlp_map='<c-p>'
 " set runtimepath=~/.vim/thomas:$VIMRUNTIME
 " This will enable the clipboard in vim
