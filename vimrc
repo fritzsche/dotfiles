@@ -1,5 +1,8 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
+" set language to german
+set langmenu=de_DE.UTF-8
+language de_DE.UTF-8
 " Encoding
 set enc=utf-8
 set fileencoding=utf-8
