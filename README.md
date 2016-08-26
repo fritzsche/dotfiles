@@ -96,7 +96,9 @@ Key       | Description
 `0`       | begin of line
 `$`       | end of line
 `CTRL-u`  | half screen up
-`CTRL-f`  | half screen down
+`CTRL-d`  | half screen down
+`CTRL-b`  | screen up
+`CTRL-f`  | screen down
 `CTRL-e`  | scroll 1 line down
 `CTRL-y`  | scroll 1 line up
 `G`       | end of file
