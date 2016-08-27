@@ -167,3 +167,16 @@ Key       | Description
 `q`       | stop recording (when pressed during macro recording)
 `@`\<n\>  | play the macro
 
+### GoLang
+
+Key       | Description
+----------|---------------
+`LEADER-r` | Run
+`LEADER-t` | Test
+`LEADER-b` | Build
+`LEADER-o` | Outline
+`LEADER-c` | Check Coverage
+`LEADER-a` | Close Quickfix
+`CTRL-n`   | Next Fix
+`CTRL-m`   | Previous
+
