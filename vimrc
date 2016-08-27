@@ -216,6 +216,22 @@ let g:go_highlight_types = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 
+map <C-n> :cnext<CR>
+map <C-m> :cprevious<CR>
+nnoremap <leader>a :cclose<CR>
+
+" Uncomment the following to have Vim jump to the last position when
+" reopening a file
+
+" Return to last edit position when opening files (You want this!)
+autocmd BufReadPost *
+     \ if line("'\"") > 0 && line("'\"") <= line("$") |
+     \   exe "normal! g`\"" |
+     \ endif
+" Remember info about open buffers on close
+set viminfo^=%
+
+
 "let g:tagbar_ctags_bin='/usr/local/bin/ctags'
 
 " To ignore plugin indent changes, instead use:
