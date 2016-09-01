@@ -217,7 +217,7 @@ let g:go_highlight_types = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 
-let g:go_metalinter_autosave = 1
+"let g:go_metalinter_autosave = 1
 
 map <C-n> :cnext<CR>
 map <C-m> :cprevious<CR>
