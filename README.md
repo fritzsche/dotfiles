@@ -111,6 +111,11 @@ Key       | Description
 `w` | next begin of a word
 `b` | last begin of a word
 
+### General
+Key       | Description
+----------|---------------
+`LEADER-l` | display invisible characters
+
 ### Copy and Past
 
   Key       | Description
