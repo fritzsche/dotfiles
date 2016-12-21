@@ -32,7 +32,7 @@ In vim run
 
 Debian:
 ```
-apt-get install python-dev cmake
+sudo apt-get install python-dev cmake
 ```
 
 and use Homebrew on the Mac.
