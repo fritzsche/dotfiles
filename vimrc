@@ -20,6 +20,10 @@ set timeoutlen=1000 ttimeoutlen=0
 set ts=2 sts=2 sw=2 expandtab
 " Enable Mouse
 set mouse=a
+if &term =~ '^screen'
+" tmux knows the extended mouse mode
+      set ttymouse=xterm2
+endif
 let g:syntastic_eruby_ruby_quiet_messages =
     \ {'regex': 'possibly useless use of a variable in void context'}
 " set the runtime path to include Vundle and initialize
