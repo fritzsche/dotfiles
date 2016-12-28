@@ -99,16 +99,18 @@ Plugin 'rbgrouleff/bclose.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-" color scheme
-color molokai
-"set background=dark
-"colorscheme solarized
-"let g:solarized_termcolors=256
-
 syntax on
 filetype on
 filetype indent on
 filetype plugin on
+
+" color scheme
+"color molokai
+syntax enable
+set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized
+
 
 "let g:airline_section_b = airline#section#create(['branch'])
 "if !exists('g:airline_symbols')
