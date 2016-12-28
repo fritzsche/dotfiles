@@ -44,6 +44,7 @@ Plugin 'tpope/vim-dispatch'
 " Used by vim-go
 Plugin 'majutsushi/tagbar'
 Plugin 'fatih/vim-go'
+Plugin 'jiangmiao/auto-pairs'
 Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
