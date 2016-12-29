@@ -6,6 +6,11 @@ language de_DE.UTF-8
 " Encoding
 set enc=utf-8
 set fileencoding=utf-8
+" correct the clipboard handling when using in tmux
+" http://stackoverflow.com/questions/11404800/fix-vim-tmux-yank-paste-on-unnamed-register
+if $TMUX == ''
+      set clipboard+=unnamed
+endif
 " Color
 set t_Co=256
 " Edit in Empty line
@@ -131,9 +136,6 @@ set helplang=de,en
 
 
 let g:ctrlp_map='<c-p>'
-" set runtimepath=~/.vim/thomas:$VIMRUNTIME
-" This will enable the clipboard in vim
-set clipboard=unnamed
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
 
