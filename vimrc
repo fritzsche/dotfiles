@@ -226,10 +226,14 @@ let g:go_highlight_types = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 
+" set the list type for vim go to quickfix to avoid
+" different handling for (location list vs quickfix)
+" see details in the vim go tutorial
+let g:go_list_type = "quickfix"
 "let g:go_metalinter_autosave = 1
 
 map <C-n> :cnext<CR>
-map <C-m> :cprevious<CR>
+map <C-m> :cp<CR>
 nnoremap <leader>a :cclose<CR>
 
 " Return to last edit position when opening files (You want this!)
