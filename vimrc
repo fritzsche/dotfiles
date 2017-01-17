@@ -244,6 +244,10 @@ autocmd BufReadPost *
 " Remember info about open buffers on close
 set viminfo^=%
 
+" all path in subdirectories get searched in file operations
+set path+=**
+set wildmenu
+
 "let g:tagbar_ctags_bin='/usr/local/bin/ctags'
 
 " To ignore plugin indent changes, instead use:
