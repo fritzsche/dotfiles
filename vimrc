@@ -250,6 +250,14 @@ set viminfo^=%
 set path+=**
 set wildmenu
 
+" spell checker for German
+" https://wiki.archlinux.de/title/Rechtschreibprüfung_unter_Vim
+au BufNewFile,BufRead,BufEnter   *.wiki    setlocal spell    spelllang=de_de
+au BufNewFile,BufRead,BufEnter   *.md      setlocal spell    spelllang=de_de
+au BufNewFile,BufRead,BufEnter   *.txt     setlocal spell    spelllang=de_de
+au BufNewFile,BufRead,BufEnter   README    setlocal spell    spelllang=en_us
+
+
 "let g:tagbar_ctags_bin='/usr/local/bin/ctags'
 
 " To ignore plugin indent changes, instead use:
