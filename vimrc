@@ -252,11 +252,20 @@ set wildmenu
 
 " spell checker for German
 " https://wiki.archlinux.de/title/Rechtschreibprüfung_unter_Vim
-au BufNewFile,BufRead,BufEnter   *.wiki    setlocal spell    spelllang=de_de
-au BufNewFile,BufRead,BufEnter   *.md      setlocal spell    spelllang=de_de
-au BufNewFile,BufRead,BufEnter   *.txt     setlocal spell    spelllang=de_de
-au BufNewFile,BufRead,BufEnter   README    setlocal spell    spelllang=en_us
+au BufNewFile,BufRead,BufEnter   *.wiki    setlocal spell    spelllang=de_de,en_us
+au BufNewFile,BufRead,BufEnter   *.md      setlocal spell    spelllang=de_de,en_us
+au BufNewFile,BufRead,BufEnter   *.txt     setlocal spell    spelllang=de_de,en_us
+au BufNewFile,BufRead,BufEnter   README    setlocal spell    spelllang=en_us,de_de
+" toggle spell on/off with leader-s
+nmap <silent> <leader>s :set spell!<CR>
 
+
+if !empty($OCAML_TOPLEVEL_PATH)
+  let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
+  execute "set rtp+=" . g:opamshare . "/merlin/vim"
+  execute "set rtp+=" . g:opamshare . "/ocp-ident/vim"
+  let g:syntastic_ocaml_checkers = ['merlin']
+endif
 
 "let g:tagbar_ctags_bin='/usr/local/bin/ctags'
 
