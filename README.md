@@ -28,6 +28,12 @@ In vim run
 :PluginInstall
 ```
 
+Download spell checker files:
+
+```
+:set spell
+```
+
 [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) Plugin need to compile with this command. Install first the Python dev. environment and cmake.
 
 Debian:
