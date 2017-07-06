@@ -31,7 +31,13 @@ if &term =~ '^screen'
 endif
 let g:syntastic_eruby_ruby_quiet_messages =
     \ {'regex': 'possibly useless use of a variable in void context'}
-" set the runtime path to include Vundle and initialize
+" VimCompleteMe
+"inoremap <C-R>=...<CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+"imap <CR> <C-R>=pumvisible() ? deoplete#mappings#close_popup() : "\n"<CR>
+"inoremap <CR> <silent> <CR> pumvisible() ? "<C-y>" : "<C-g>u<CR>"
+"inoremap <C-R>=...<CR> pumvisible() ? "<C-y>" : "<C-g>u<CR>"
+
+"set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 " Allow backspaces everywhere
 set backspace=indent,eol,start
@@ -44,7 +50,8 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-" Dispatch is used by vim-go
+
+"  Dispatch is used by vim-go
 Plugin 'tpope/vim-dispatch'
 " Used by vim-go
 Plugin 'majutsushi/tagbar'
@@ -89,14 +96,16 @@ Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'airblade/vim-gitgutter'
+Plugin 'ajh17/vimcompletesme'
 
 " Track the engine.
 Plugin 'SirVer/ultisnips'
 
 " Snippets are separated from the engine. Add this if you want them:
 Plugin 'honza/vim-snippets'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'ervandew/supertab'
+" Plugin 'Valloric/YouCompleteMe'
+
+"Plugin 'ervandew/supertab'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
@@ -107,6 +116,8 @@ Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'rbgrouleff/bclose.vim'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
+
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -180,14 +191,16 @@ set nofoldenable
 
  set completeopt-=preview
 " make YCM compatible with UltiSnips (using supertab)
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-let g:SuperTabDefaultCompletionType = '<C-n>'
+"let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+"let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+"let g:SuperTabDefaultCompletionType = '<C-n>'
 
-" better key bindings for UltiSnipsExpandTrigger
-let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+""" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<c-e>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+"let g:UltiSnipsJumpForwardTrigger = "<C-k>"
+"let g:UltiSnipsJumpBackwardTrigger = "C-j>"
 
 " vim go
 set autowrite
@@ -267,6 +280,16 @@ if !empty($OCAML_TOPLEVEL_PATH)
   let g:syntastic_ocaml_checkers = ['merlin']
 endif
 
+" Setup youcompletesme
+"inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"]
+"imap <CR> <C-R>=pumvisible() ? deoplete#mappings#close_popup() : "\n"<CR>
+autocmd FileType ruby let b:vcm_tab_complete = "omni"
+autocmd FileType go let b:vcm_tab_complete = "omni"
+autocmd FileType ocaml let b:vcm_tab_complete = "omni"
+
+
+"
+" "]
 "let g:tagbar_ctags_bin='/usr/local/bin/ctags'
 
 " To ignore plugin indent changes, instead use:
