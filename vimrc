@@ -31,11 +31,9 @@ if &term =~ '^screen'
 endif
 let g:syntastic_eruby_ruby_quiet_messages =
     \ {'regex': 'possibly useless use of a variable in void context'}
-" VimCompleteMe
-"inoremap <C-R>=...<CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-"imap <CR> <C-R>=pumvisible() ? deoplete#mappings#close_popup() : "\n"<CR>
-"inoremap <CR> <silent> <CR> pumvisible() ? "<C-y>" : "<C-g>u<CR>"
-"inoremap <C-R>=...<CR> pumvisible() ? "<C-y>" : "<C-g>u<CR>"
+" Supertab config
+let g:SuperTabCrMapping = 1
+let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 
 "set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -50,7 +48,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-
+Plugin 'farmergreg/vim-lastplace'
 "  Dispatch is used by vim-go
 Plugin 'tpope/vim-dispatch'
 " Used by vim-go
@@ -96,7 +94,7 @@ Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'airblade/vim-gitgutter'
-Plugin 'ajh17/vimcompletesme'
+"Plugin 'ajh17/vimcompletesme'
 
 " Track the engine.
 Plugin 'SirVer/ultisnips'
@@ -105,7 +103,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 " Plugin 'Valloric/YouCompleteMe'
 
-"Plugin 'ervandew/supertab'
+Plugin 'ervandew/supertab'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
@@ -251,6 +249,7 @@ map <C-n> :cnext<CR>
 map <C-m> :cp<CR>
 nnoremap <leader>a :cclose<CR>
 
+source $VIMRUNTIME/vimrc_example.vim
 " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost *
      \ if line("'\"") > 0 && line("'\"") <= line("$") |
@@ -283,9 +282,9 @@ endif
 " Setup youcompletesme
 "inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"]
 "imap <CR> <C-R>=pumvisible() ? deoplete#mappings#close_popup() : "\n"<CR>
-autocmd FileType ruby let b:vcm_tab_complete = "omni"
-autocmd FileType go let b:vcm_tab_complete = "omni"
-autocmd FileType ocaml let b:vcm_tab_complete = "omni"
+"autocmd FileType ruby let b:vcm_tab_complete = "omni"
+"autocmd FileType go let b:vcm_tab_complete = "omni"
+"autocmd FileType ocaml let b:vcm_tab_complete = "omni"
 
 
 "
