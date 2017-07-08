@@ -34,7 +34,8 @@ let g:syntastic_eruby_ruby_quiet_messages =
 " Supertab config
 let g:SuperTabCrMapping = 1
 let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
-
+" avoid undo
+set noundofile
 "set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 " Allow backspaces everywhere
@@ -72,7 +73,7 @@ Plugin 'ap/vim-css-color'
 
 Plugin 'slim-template/vim-slim'
 Plugin 'tpope/vim-bundler'
-Plugin 'tpope/vim-endwise'
+"Plugin 'tpope/vim-endwise'
 Plugin 'Tpope/vim-commentary'
 Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-rake'
@@ -187,7 +188,8 @@ set nofoldenable
 "let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 
- set completeopt-=preview
+set completeopt-=preview
+
 " make YCM compatible with UltiSnips (using supertab)
 "let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 "let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
@@ -249,14 +251,14 @@ map <C-n> :cnext<CR>
 map <C-m> :cp<CR>
 nnoremap <leader>a :cclose<CR>
 
-source $VIMRUNTIME/vimrc_example.vim
+"source $VIMRUNTIME/vimrc_example.vim
 " Return to last edit position when opening files (You want this!)
-autocmd BufReadPost *
-     \ if line("'\"") > 0 && line("'\"") <= line("$") |
-     \   exe "normal! g`\"" |
-     \ endif
+"autocmd BufReadPost *
+"     \ if line("'\"") > 0 && line("'\"") <= line("$") |
+"     \   exe "normal! g`\"" |
+"     \ endif
 " Remember info about open buffers on close
-set viminfo^=%
+"set viminfo^=%
 
 " all path in subdirectories get searched in file operations
 set path+=**
