@@ -139,7 +139,9 @@ colorscheme solarized
 "    let g:airline_symbols = {}
 "endif
 
+" Map the leader key to space and local leader to underscore
 let mapleader = " "
+let maplocalleader = "_"
 " Remap the open tag in the help to t as CTRL-] is difficult to reach on
 " a german keyboard
 nnoremap t <C-]>
