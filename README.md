@@ -74,6 +74,11 @@ Update the Go-Tools within vim:
 :GoUpdateBinaries
 ```
 
+Install the OCaml Merlin documentation by running the following within vim
+```
+:execute "helptags " . substitute(system('opam config var share'),'\n$','','''') .  "/merlin/vim/doc"'')
+```
+
 ## Tmux Setup in tmux.conf
 
 Base configuration for tmux. This is changing the `PREFIX` from `CTRL-B` to `CTRL-A`. This is in particular usefull as I have mapped the `CAPS LOCK` to `CTRL` so I can issue the `PREFIX` just from the homerow of the keyboard.
