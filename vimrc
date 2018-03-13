@@ -281,6 +281,8 @@ nmap <silent> <leader>s :set spell!<CR>
 
 " Setup OCaml
 if !empty($OCAML_TOPLEVEL_PATH)
+  " do not indent comments
+  let no_ocaml_comments = 1
   let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
   execute "set rtp^=" . g:opamshare . "/merlin/vim"
   execute "set rtp^=" . g:opamshare . "/ocp-indent/vim"
