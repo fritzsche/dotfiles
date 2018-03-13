@@ -11,6 +11,7 @@ Link the files to the homedirectory:
 ```
 ln -s dotfiles/vimrc ~/.vimrc
 ln -s dotfiles/tmux.conf ~/.tmux.conf
+ln -s dotfiles/ocamlinit ~/.ocamlinit
 ```
 
 ## Vim Setup in vimrc
