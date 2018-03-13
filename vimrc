@@ -34,14 +34,17 @@ let g:syntastic_eruby_ruby_quiet_messages =
 " Supertab config
 let g:SuperTabCrMapping = 1
 let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+
+
+
 " avoid undo
 set noundofile
-"set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
 " Allow backspaces everywhere
 set backspace=indent,eol,start
 " keep 2 lines on the screen when scrolling
 set scrolloff=2
+"set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
 " Here start the vundle section with the plugins
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
@@ -122,9 +125,9 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 syntax on
-filetype on
-filetype indent on
-filetype plugin on
+"filetype on
+"filetype indent on
+"filetype plugin on
 
 " color scheme
 "color molokai
@@ -276,10 +279,11 @@ au BufNewFile,BufRead,BufEnter   README    setlocal spell    spelllang=en_us,de_
 nmap <silent> <leader>s :set spell!<CR>
 
 
+" Setup OCaml
 if !empty($OCAML_TOPLEVEL_PATH)
   let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
-  execute "set rtp+=" . g:opamshare . "/merlin/vim"
-  execute "set rtp+=" . g:opamshare . "/ocp-ident/vim"
+  execute "set rtp^=" . g:opamshare . "/merlin/vim"
+  execute "set rtp^=" . g:opamshare . "/ocp-indent/vim"
   let g:syntastic_ocaml_checkers = ['merlin']
 endif
 
@@ -306,3 +310,4 @@ endif
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
